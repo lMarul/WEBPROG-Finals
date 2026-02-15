@@ -10,7 +10,6 @@ import {
   ArrowRight,
   Sparkles,
 } from 'lucide-react';
-import { api } from '../services/api';
 import { Profile } from '../types';
 import { LoadingPage } from '../components/LoadingSpinner';
 
@@ -24,7 +23,6 @@ const iconMap: Record<string, React.ReactNode> = {
 export default function HomePage() {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     loadProfile();
@@ -44,19 +42,6 @@ export default function HomePage() {
 
   if (loading) {
     return <LoadingPage />;
-  }
-
-  if (error && !profile) {
-    return (
-      <div className="min-h-[50vh] flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-red-400 mb-4">{error}</p>
-          <button onClick={loadProfile} className="btn-primary">
-            Try Again
-          </button>
-        </div>
-      </div>
-    );
   }
 
   return (
