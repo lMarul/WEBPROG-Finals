@@ -5,7 +5,7 @@ export default function NotFoundPage() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4">
       <div className="text-center animate-fade-in">
-        <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-slate-800/50 mb-6">
+        <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-black/50 border border-red-900/30 mb-6">
           <Search size={48} className="text-slate-500" />
         </div>
         

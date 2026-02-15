@@ -136,7 +136,7 @@ export default function GuestbookPage() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <header className="text-center mb-10 animate-fade-in">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary-500 to-cyan-500 mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-red-600 to-red-900 mb-4">
             <MessageSquare size={32} className="text-white" />
           </div>
           <h1 className="text-4xl font-bold mb-3">
@@ -330,7 +330,7 @@ export default function GuestbookPage() {
                     <>
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500/20 to-cyan-500/20 flex items-center justify-center text-primary-400 font-bold">
+                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-600/20 to-red-900/20 flex items-center justify-center text-primary-400 font-bold">
                             {entry.name.charAt(0).toUpperCase()}
                           </div>
                           <div>
@@ -344,14 +344,14 @@ export default function GuestbookPage() {
                         <div className="flex items-center gap-1">
                           <button
                             onClick={() => startEdit(entry)}
-                            className="p-2 text-slate-500 hover:text-primary-400 hover:bg-slate-700/50 rounded-lg transition-colors"
+                            className="p-2 text-slate-500 hover:text-primary-400 hover:bg-black/50 rounded-lg transition-colors"
                             title="Edit"
                           >
                             <Edit3 size={16} />
                           </button>
                           <button
                             onClick={() => setDeletingId(entry.id)}
-                            className="p-2 text-slate-500 hover:text-red-400 hover:bg-slate-700/50 rounded-lg transition-colors"
+                            className="p-2 text-slate-500 hover:text-red-400 hover:bg-black/50 rounded-lg transition-colors"
                             title="Delete"
                           >
                             <Trash2 size={16} />

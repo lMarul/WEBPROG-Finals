@@ -9,11 +9,11 @@ export default function Navbar() {
     `flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
       isActive
         ? 'bg-primary-600/20 text-primary-400'
-        : 'text-slate-300 hover:text-white hover:bg-slate-800'
+        : 'text-slate-300 hover:text-white hover:bg-slate-900/50'
     }`;
 
   return (
-    <nav className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-slate-700/50">
+    <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-lg border-b border-red-900/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -21,10 +21,10 @@ export default function Navbar() {
             to="/"
             className="flex items-center gap-2 text-xl font-bold text-gradient"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-cyan-500 flex items-center justify-center">
-              <span className="text-white text-sm font-bold">P</span>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-red-600 to-red-900 flex items-center justify-center">
+              <span className="text-white text-sm font-bold">M</span>
             </div>
-            Profile
+            Marwin John Gonzales
           </Link>
 
           {/* Desktop Navigation */}
@@ -42,7 +42,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-900/50 transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -50,7 +50,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-slate-700/50 animate-slide-down">
+          <div className="md:hidden py-4 border-t border-red-900/30 animate-slide-down">
             <div className="flex flex-col gap-2">
               <NavLink
                 to="/"

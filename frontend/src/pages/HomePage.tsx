@@ -40,7 +40,7 @@ export default function HomePage() {
       console.error('Failed to load profile:', err);
       // Use default profile if API fails
       setProfile({
-        name: 'Your Name',
+        name: 'Marwin John Gonzales',
         title: 'Full Stack Developer',
         bio: 'Welcome to my personal profile! I am a passionate developer who loves building web applications. Feel free to leave a message in my guestbook!',
         skills: ['JavaScript', 'TypeScript', 'React', 'NestJS', 'Node.js', 'Supabase'],
@@ -83,7 +83,7 @@ export default function HomePage() {
                 className="w-32 h-32 rounded-full mx-auto border-4 border-primary-500/30 shadow-lg shadow-primary-500/20"
               />
             ) : (
-              <div className="w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary-500 to-cyan-500 flex items-center justify-center text-white text-4xl font-bold shadow-lg shadow-primary-500/20">
+              <div className="w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-red-600 to-red-900 flex items-center justify-center text-white text-4xl font-bold shadow-lg shadow-red-600/30">
                 {profile?.name?.charAt(0) || 'U'}
               </div>
             )}
@@ -123,7 +123,7 @@ export default function HomePage() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-slate-800 text-slate-400 hover:bg-primary-600 hover:text-white transition-all duration-200"
+                  className="p-3 rounded-full bg-black/50 text-slate-400 hover:bg-red-600 hover:text-white transition-all duration-200"
                   title={link.platform}
                 >
                   {iconMap[link.icon || 'globe'] || <Globe size={20} />}
