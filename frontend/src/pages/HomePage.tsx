@@ -31,25 +31,15 @@ export default function HomePage() {
   }, []);
 
   const loadProfile = async () => {
-    try {
-      setLoading(true);
-      const data = await api.getProfile();
-      setProfile(data);
-      setError(null);
-    } catch (err) {
-      console.error('Failed to load profile:', err);
-      // Use default profile if API fails
-      setProfile({
-        name: 'Marwin John Gonzales',
-        title: 'Full Stack Developer',
-        bio: 'Welcome to my personal profile! I am a passionate developer who loves building web applications. Feel free to leave a message in my guestbook!',
-        skills: ['JavaScript', 'TypeScript', 'React', 'NestJS', 'Node.js', 'Supabase'],
-        socialLinks: [],
-      });
-      setError(null);
-    } finally {
-      setLoading(false);
-    }
+    // Hardcoded profile data in frontend
+    setProfile({
+      name: 'Marwin John Gonzales',
+      title: 'Full Stack Developer',
+      bio: 'Welcome to my personal profile! I am a passionate developer who loves building web applications. Feel free to leave a message in my guestbook!',
+      skills: ['JavaScript', 'TypeScript', 'React', 'NestJS', 'Node.js', 'Supabase'],
+      socialLinks: [],
+    });
+    setLoading(false);
   };
 
   if (loading) {
